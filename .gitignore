@@ -1,0 +1,24 @@
+# Ignorar dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de entorno
+.env
+.env.local
+
+# Ignorar logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar caché de compilación de frontend
+frontend/build/
+frontend/dist/
+
+# Ignorar caché de compilación de backend
+backend/build/
+backend/dist/
+
+# Ignorar directorios de dependencias innecesarios
+.DS_Store
