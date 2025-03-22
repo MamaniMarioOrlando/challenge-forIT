@@ -4,9 +4,9 @@ const getAllTasks = ()=>{
     return tasks;
 }
 
-const createTask = (title, descripcion)=>{
+const createTask = (title, description)=>{
     const newTask = {
-        id: Date.now.toString(),
+        id: Date.now().toString(),
         title,
         description,
         completed: false,
