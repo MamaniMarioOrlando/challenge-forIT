@@ -12,7 +12,7 @@ const createTask = (req, res) => {
 }
 
 const updateTask = (req, res) => {
-    const taskId = req.param.id;
+    const taskId = req.params.id;
     const udpdateData = req.body;
     const updateTask = taskModel.updateTask(taskId, udpdateData);
     if(!updateTask){
@@ -21,9 +21,13 @@ const updateTask = (req, res) => {
     res.json(updateTask);
 };
 const deleteTask = (req, res) =>{
-    const taskId = req.param.id;
-    taskModel.deleteTask(taskId);
-    res.status(204).semd();
+    const taskId = req.params.id;
+    const isDeleted = taskModel.deleteTask(taskId);
+
+    if(!isDeleted){
+        return res.status(404).json({error: 'task not found'});
+    }
+    res.status(200).json({ message: 'The task was successfully deleted' });
 };
 
 module.exports = {

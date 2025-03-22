@@ -17,18 +17,19 @@ const createTask = (title, description)=>{
     return newTask;
 };
 
-const updateTask = (id, udpdateData) => {
+const updateTask = (id, updateData) => {
     const taskIndex = tasks.findIndex(task => task.id === id);
     
     if(taskIndex === -1) return null;
 
-    tasks[taskIndex] = { ...tasks, ...udpdateData};
+    tasks[taskIndex] = { ...tasks[taskIndex], ...updateData};
     return tasks[taskIndex];
 };
 
 const deleteTask = (id) =>{
-    tasks = tasks.filter(tasks => task.id !== id);
-    return true;
+    const initialLength = tasks.length;
+    tasks = tasks.filter(task => task.id !== id);
+    return tasks.length !== initialLength;
 };
 
 module.exports = {
