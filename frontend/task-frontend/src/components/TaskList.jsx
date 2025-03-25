@@ -1,19 +1,6 @@
-import { useEffect, useState } from 'react'
 import { TaskItem } from './TaskItem';
 
-export const TaskList = () => {
-    const [tasks, setTasks] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/api/tasks')
-            .then(response => {
-                if(!response.ok){
-                    throw new error('Error in obtaining tasks.')
-                }
-                return response.json();
-            })
-            .then(data => setTasks(data))
-            .catch(error => console.error(error));
-    },[])
+export const TaskList = ({tasks}) => {
   return (
     <>
         <div className="space-y-9 max-w-2xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-2xl">

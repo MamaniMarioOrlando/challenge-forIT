@@ -1,9 +1,9 @@
 import { TaskList } from '../components/TaskList'
 
-export const Home = () => {
+export const Home = ({tasks}) => {
   return (
     <>
-      <TaskList/>
+      <TaskList tasks={tasks}/>
     </>
   )
 }
