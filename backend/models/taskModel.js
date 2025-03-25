@@ -5,12 +5,13 @@ const getAllTasks = ()=>{
 }
 
 const createTask = (title, description)=>{
+    if(!title || !description) throw new Error("Title and description are required");
     const newTask = {
         id: Date.now().toString(),
         title,
         description,
         completed: false,
-        created: new Date()
+        createdAt: new Date()
     };
 
     tasks.push(newTask);

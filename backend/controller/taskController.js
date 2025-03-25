@@ -13,8 +13,8 @@ const createTask = (req, res) => {
 
 const updateTask = (req, res) => {
     const taskId = req.params.id;
-    const udpdateData = req.body;
-    const updateTask = taskModel.updateTask(taskId, udpdateData);
+    const updateData = req.body;
+    const updateTask = taskModel.updateTask(taskId, updateData);
     if(!updateTask){
         return res.status(404).json({error:'Task not found'});
     }
