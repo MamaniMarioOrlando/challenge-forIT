@@ -23,7 +23,12 @@ const updateTask = (id, updateData) => {
     
     if(taskIndex === -1) return null;
 
-    tasks[taskIndex] = { ...tasks[taskIndex], ...updateData};
+    tasks[taskIndex] = { 
+        ...tasks[taskIndex],
+        ...updateData,
+        id: tasks[taskIndex].id,
+        createTask: tasks[taskIndex].createdAt    
+    };
     return tasks[taskIndex];
 };
 
