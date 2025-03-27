@@ -26,8 +26,7 @@ const updateTask = (id, updateData) => {
     tasks[taskIndex] = { 
         ...tasks[taskIndex],
         ...updateData,
-        id: tasks[taskIndex].id,
-        createTask: tasks[taskIndex].createdAt    
+         
     };
     return tasks[taskIndex];
 };
