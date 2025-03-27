@@ -1,7 +1,7 @@
 # 🚀 Challenge-forIT
 
 <div align="center">
-  <img src="https://i.imgur.com/JQ9w2Jn.png" width="400" alt="Vista previa">
+  <img src="./frontend/task-frontend/public/forIT.png" width="400" alt="Vista previa">
   <p><em>Aplicación de gestión de tareas fullstack</em></p>
 </div>
 
@@ -103,18 +103,18 @@ npm run dev
 ![netodo Delete](assets/bakend03.png)
 
 ### 📌 Frontend 
-![Mostra listTask](assets/frontend00.png)
+![Frontend](assets/frontend00.png)
 
 ### 📌 Formulario creacion de  Tareas  
-![Mostra listTask](assets/frontend01.png)
+![Frontend](assets/frontend01.png)
 
-### 📌 Mdtrar lista de tareas  
-![Mostra listTask](assets/frontend02.png)
+### 📌 Mostrar lista de tareas  
+![Frontend](assets/frontend02.png)
 
 ### 📌 Editar tarea 
-![Mostra listTask](assets/frontend03.png)
+![Frontend](assets/frontend03.png)
 
-![Mostra listTask](assets/frontend04.png)
+![Frontend](assets/frontend04.png)
 
 
 ## 📌 Endpoints API
